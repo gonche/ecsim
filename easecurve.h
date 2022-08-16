@@ -12,10 +12,13 @@ using namespace std;
 class EaseCurve{
 public:
   EaseCurve();
-  float easeInOutSine(float t, float b, float c, float d);
-  float linear(float t, float b, float c, float d);
-  float easeIn(float t, float b, float c, float d);
-  float easeOut(float t, float b, float c, float d);
+  float EaseInOutSine(float t, float b, float c, float d);
+  float Linear(float t, float b, float c, float d);
+  float EaseIn(float t, float b, float c, float d);
+  float EaseOut(float t, float b, float c, float d);
+  float InQuad(float t, float b, float c, float d);
+  float OutQuad(float t, float b, float c, float d);
+  float InOutQuad(float t, float b, float c, float d);
   float getInterpolation(string type, float t, float b, float c, float d); 
 };
 
