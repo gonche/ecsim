@@ -21,9 +21,20 @@ make
 ```
 
 cd ecsim/build/
-cat file | ./ecsim 
+cat ../file | ./ecsim 
 
 ```
 
-### This program has been tested on Macos. 
+### This program has been tested on Macos.
 
+### Citations
+
+interpolations take from :-
+
+```
+
+jesús gollonet
+https://github.com/jesusgollonet/ofpennereasing
+a port of penner's easing equations to c++
+
+```
