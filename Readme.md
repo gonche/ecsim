@@ -29,7 +29,7 @@ cat ../file | ./ecsim
 
 ### Citations
 
-interpolations take from :-
+Research - Robert Penner's Easing Functions
 
 ```
 
