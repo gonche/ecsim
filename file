@@ -1,4 +1,4 @@
-Linear,x_t0=0,x_tmax=200,duration=1
+InOutQuad,x_t0=0,x_tmax=200,duration=1
 0.1
 0.2
 0.3
