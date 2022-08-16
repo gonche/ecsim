@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <iostream>
+#include <list>
+#include <string>
 #include "easecurve.h"
 
 using namespace std;
@@ -19,6 +21,11 @@ int main(int argc, char* argv[])
     string t0_d = "x_t0=";
     string tmax_d = "x_tmax=";
     string duration_d = "duration=";
+
+    std::list<std::string> easing_list = {
+        "linear", "easein", "easeout", "inquad", "outquad", "inoutquad"
+    };
+    std::list<std::string>:: iterator pos;
 
     std::getline(std::cin, str);
     std::string::difference_type n = std::count(str.begin(), str.end(), ',');
@@ -43,6 +50,12 @@ int main(int argc, char* argv[])
     string ease_curve = Tokens.at(0);
     std::transform(ease_curve.begin(), ease_curve.end(), ease_curve.begin(),
     [](unsigned char c){ return std::tolower(c); });
+
+    pos = find(easing_list.begin() , easing_list.end() , ease_curve);
+    if (pos == easing_list.end()){
+        cout << "error: easing type not found" << endl;
+        exit(1);
+    }
 
     string t0 = Tokens.at(1);
     string tmax = Tokens.at(2);
